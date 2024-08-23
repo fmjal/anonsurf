@@ -5,5 +5,5 @@ Terminal=false
 Exec=anonsurf myip
 Name=Check IP address
 Comment=Print the current IP address
-Icon=network-server
-Categories=anonsurf;
+Icon=/usr/share/icons/network-server.png
+Categories=Network;anonsurf;

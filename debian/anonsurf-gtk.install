@@ -1,2 +1,13 @@
 bin/anonsurf-gtk usr/bin/
 launchers/anon-gui.desktop usr/share/applications/
+icons/anon-about.svg /usr/share/icons/anon-about.svg
+icons/anonsurf.png /usr/share/icons/anonsurf.png
+icons/boot-off.svg /usr/share/icons/boot-off.svg
+icons/boot-on.svg /usr/share/icons/boot-on.svg
+icons/exit.png /usr/share/icons/exit.png
+icons/help-about.png /usr/share/icons/help-about.png
+icons/nyx-logo.png /usr/share/icons/nyx-logo.png
+icons/reload.png /usr/share/icons/reload.png
+icons/sec-high.svg /usr/share/icons/sec-high.svg
+icons/sec-low.svg /usr/share/icons/sec-low.svg
+icons/sec-med.svg /usr/share/icons/sec-med.svg

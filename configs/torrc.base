@@ -8,15 +8,17 @@ AutomapHostsOnResolve 1
 AutomapHostsSuffixes .exit,.onion
 
 #define tor ports and explicitly declare some security flags
-TransPort 127.0.0.1:9040 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
-SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+TransPort 127.0.0.1:9040 IPv6Traffic PreferIPv6 IsolateClientProtocol IsolateClientAddr KeepAliveIsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+SocksPort 127.0.0.1:9050 IPv6Traffic PreferIPv6 IsolateClientProtocol IsolateClientAddr KeepAliveIsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 ControlPort 127.0.0.1:9051
-
+CookieAuthentication 1
+ConnectionPadding 1
+ReducedConnectionPadding 0
 #use tor to resolve domain names
 DNSPort 127.0.0.1:53
 
 #daemonize
-RunAsDaemon 1
+RunAsDaemon 0
 
 #use hardware accaleration when possible for crypto
 HardwareAccel 1
@@ -29,8 +31,12 @@ AllowNonRFC953Hostnames 0
 ClientRejectInternalAddresses 1
 
 #circuit hacks
-NewCircuitPeriod 40
 MaxCircuitDirtiness 600
-MaxClientCircuitsPending 48
+MaxClientCircuitsPending 96
 UseEntryGuards 1
 EnforceDistinctSubnets 1
+UseEntryGuards 1
+NumEntryGuards 5
+VanguardsLiteEnabled 1
+GuardLifetime 30days
+
